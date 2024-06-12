@@ -1,7 +1,14 @@
 import React from 'react'
 import "../styles/prodDes.css"
+import { useNavigate } from 'react-router-dom';
 
 const ProductDescription = () => {
+  const navigate = useNavigate()
+
+  const handleClick = ()=>{
+    navigate("/page2")
+  }
+
   return (
     <>
     <nav>
@@ -13,11 +20,11 @@ const ProductDescription = () => {
     </nav>
     <div className="product-description">
         <div className="info">
-          <div id='droneBanner'>
-          <img  src="https://img.freepik.com/premium-photo/highquality-aerial-shot-drone-with-digital-camera-flying_1021945-1961.jpg" alt="Drone1"/>
-          <img  src="https://media.macphun.com/img/uploads/macphun/blog/2347/pexels-emiliano-arano-1308660.jpg" alt="Drone2" />
+          <div id='imgContainer'>
+            <img  src="https://img.freepik.com/premium-photo/highquality-aerial-shot-drone-with-digital-camera-flying_1021945-1961.jpg" alt="Drone1"/>
+            <img  src="https://media.macphun.com/img/uploads/macphun/blog/2347/pexels-emiliano-arano-1308660.jpg" alt="Drone2" />
           </div>
-          <div>
+          <div id='descriptionContainer'>
             <p>An unmanned aerial vehicle (UAV), commonly known as a drone, is an aircraft without any human pilot, crew, or passengers on board.</p>
             <p>An unmanned aerial vehicle (UAV) is defined as a "powered, aerial vehicle that does not carry a human operator, uses aerodynamic forces to provide vehicle lift, can fly autonomously or be piloted remotely, can be expendable or recoverable, and can carry a lethal or nonlethal payload". UAV is a term that is commonly applied to military use cases.</p>
             <p>UAVs may be classified like any other aircraft, according to design configuration such as weight or engine type, maximum flight altitude, degree of operational autonomy, operational role, etc.</p>
@@ -32,8 +39,10 @@ const ProductDescription = () => {
             </p>
           </div>
         </div>
-        <p>Click Start to begin assembling your custom drone!</p>
-        <button >Start</button>
+        <div className='btnContainer'>
+          <p>Click Start to begin assembling your custom drone!</p>
+          <button onClick={handleClick} >Start</button>
+        </div>
     </div>
     </>
   )
