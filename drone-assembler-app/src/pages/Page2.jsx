@@ -1,8 +1,9 @@
 import React from 'react'
+import PartsSelection from '../components/PartsSelection'
 
 const Page2 = () => {
   return (
-    <div>Page2</div>
+    <PartsSelection/>
   )
 }
 
