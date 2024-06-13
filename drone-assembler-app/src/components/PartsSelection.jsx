@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import '../styles/partsSelect.css'
-import FLC from '../assets/Flight controller unit.jpg'
+import FLC from '../assets/Frame with Flight controller.jpg'
 import leftarm from '../assets/left arms.jpg'
 import rightarm from '../assets/right arms.jpg'
 import camera from '../assets/camera.jpg'
@@ -50,6 +50,10 @@ const PartsSelection = () => {
         navigate('/page3', { state: { selectedParts } })
     }
 
+    const handleBack = () => {
+        navigate("/")
+    }
+
     return (
         <>
             <nav>
@@ -72,6 +76,7 @@ const PartsSelection = () => {
                 ))}
             </div>
             <div className='btnContainer'>
+                <button onClick={handleBack} >Back</button>
                 <p>Click Next to begin assembling your drone with selected parts</p>
                 <button onClick={handleClick} >Next</button>
             </div>

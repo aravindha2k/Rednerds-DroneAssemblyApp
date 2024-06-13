@@ -104,9 +104,10 @@ const Assembly = () => {
       </div>
     </div>
     <div className='btnContainer'>
+      <button onClick={handleBack} >Back</button>
       <p>Click Next to view your final assembled drone</p>
       <button onClick={handleClick} >Next</button>
-      <button onClick={handleBack} >Back</button>
+      
     </div>
     </>
   );
