@@ -47,7 +47,7 @@ const PartsSelection = () => {
     };
 
     const handleClick = ()=>{
-        navigate('/page3')
+        navigate('/page3', { state: { selectedParts } })
     }
 
     return (
